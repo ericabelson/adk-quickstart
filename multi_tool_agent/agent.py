@@ -1,16 +1,6 @@
 import datetime
 from zoneinfo import ZoneInfo
 from google.adk.agents import Agent
-from dotenv import load_dotenv
-import os
-
-# Path to your secrets file in your dotfiles repo
-secrets_path = r"C:\eric\Dropbox\rsrch collab etc\code\github\dotfiles\adk-quickstart.env"
-load_dotenv(secrets_path)
-
-# Now you can access your API key as an environment variable
-api_key = os.getenv("GOOGLE_API_KEY")
-print("Loaded API key:", api_key[:5], "...")
 
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
